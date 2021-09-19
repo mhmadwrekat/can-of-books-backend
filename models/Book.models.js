@@ -11,15 +11,17 @@ const bookModel = mongoose.model('book', bookSM);
 module.exports = {
     bookModel
 }
-//❤️Add Book❤️
-/*
+/*//❤️Add Book❤️
 let seedBook = () => {
     let newBook = new bookModel({
-        title : "Practical Magic" ,
-        description : "The Owens sisters confront the challenges of life and love in this bewitching novel from New York Times bestselling author Alice Hoffman. For more than two hundred years, the Owens women have been blamed for everything that has gone wrong in their Massachusetts town. Gillian and Sally have endured that fate as well: as children, the sisters were forever outsiders, taunted, talked about, pointed at. Their elderly aunts almost seemed to encourage the whispers of witchery, with their musty house and their exotic concoctions and their crowd of black cats. But all Gillian and Sally wanted was to escape. One will do so by marrying, the other by running away. But the bonds they share will bring them back—almost as if by magi." ,
+        title : "The World That We Knew" ,
+        description : "In 1941, during humanity’s darkest hour, three unforgettable young women must act with courage and love to survive, from the New York Times bestselling author of The Dovekeepers and The Marriage of Opposites Alice Hoffman. In Berlin, at the time when the world changed, Hanni Kohn knows she must send her twelve-year-old daughter away to save her from the Nazi regime. She finds her way to a renowned rabbi, but it’s his daughter, Ettie, who offers hope of salvation when she creates a mystical Jewish creature, a rare and unusual golem, who is sworn to protect Lea. Once Ava is brought to life, she and Lea and Ettie become eternally entwined, their paths fated to cross, their fortunes linked. Lea and Ava travel from Paris, where Lea meets her soulmate, to a convent in western France known for its silver roses; from a school in a mountaintop village where three thousand Jews were saved. Meanwhile, Ettie is in hiding, waiting to become the fighter she’s destined to be ." ,
         status : true ,
         email : "www.Alice-Hoffman@gmail.com"
     }) ;
     newBook.save() ;
 }
 */
+module.exports = {
+    bookModel
+}
