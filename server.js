@@ -14,9 +14,9 @@ const bookController = require('./controllers/Book.controllers');
 //❤️Welcome Message❤️
 app.get('/', (req, res) => {
     res.status(200).json({ "❤️": "Hello from The Back-End !" })
-  })
+})
 //❤️❤️❤️❤️❤️
-app.get('/DataBooks', bookController);
+app.get('/databooks', bookController);
 
 //❤️❤️❤️❤️❤️
 app.listen(PORT, () => {
