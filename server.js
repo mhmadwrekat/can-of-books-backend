@@ -12,13 +12,17 @@ const { seedBook } = require('./models/Book.models');
 mongoose.connect(`mongodb+srv://${MONGO_SERVER}`, { useNewUrlParser: true, useUnifiedTopology: true });
 const { bookController,
     createBookController,
-    deleteBookController } = require('./controllers/Book.controllers');
+    deleteBookController,
+    updateBookController } = require('./controllers/Book.controllers');
 
-// 💜  POST New BOOK💜 
-app.post('/createbook', createBookController);
+//💙 UPDATE BOOK💙
+app.put('/updatebook/:id', updateBookController)
 
 // ❤️ DELETE BOOK❤️
 app.delete('/deletebook/:id', deleteBookController);
+
+// 💜  POST New BOOK💜 
+app.post('/createbook', createBookController);
 
 //🤍 GET Data From DB🤍
 app.get('/data', bookController);

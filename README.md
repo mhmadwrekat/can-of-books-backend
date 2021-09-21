@@ -10,7 +10,7 @@
 * **Getting Started :** open the website enter a city name press on explore .
 
 
-* **Architecture :** 
+* **Architecture :**
   * react js 
   * bootstrap 
 
@@ -35,5 +35,38 @@ Start time : 1:20 pm .
 Finish time: 5:20 pm . 
 
 Actual time needed to complete: 4:00 Hours .
+
+---
+Name of feature: **2** Create .
+
+Estimate of time needed to complete: 2 hours .
+
+Start time : 3:20 pm .
+
+Finish time: 5:20 pm . 
+
+Actual time needed to complete: 2:00 Hours .
+
+---
+Name of feature: **3** Delete .
+
+Estimate of time needed to complete: 3 hours .
+
+Start time : 6:00 pm .
+
+Finish time: 9:20 am . 
+
+Actual time needed to complete: 3:20 Hours .
+
+---
+Name of feature: **4** Update .
+
+Estimate of time needed to complete: 2 hours .
+
+Start time : 3:10 pm .
+
+Finish time: 5:20 pm . 
+
+Actual time needed to complete: 2:10 Hours .
 
 ---
