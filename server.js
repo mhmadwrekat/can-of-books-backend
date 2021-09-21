@@ -5,26 +5,36 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 app.use(cors());
+app.use(express.json());
 const PORT = process.env.PORT;
 const MONGO_SERVER = process.env.MONGO_SERVER;
 const { seedBook } = require('./models/Book.models');
 mongoose.connect(`mongodb+srv://${MONGO_SERVER}`, { useNewUrlParser: true, useUnifiedTopology: true });
-const bookController = require('./controllers/Book.controllers');
+const { bookController,
+    createBookController,
+    deleteBookController } = require('./controllers/Book.controllers');
 
-//❤️❤️❤️❤️❤️
+// 💜  POST New BOOK💜 
+app.post('/createbook', createBookController);
+
+// ❤️ DELETE BOOK❤️
+app.delete('/deletebook/:id', deleteBookController);
+
+//🤍 GET Data From DB🤍
 app.get('/data', bookController);
 
-//❤️Add Book❤️
+//🧡 Add Book🧡
 app.get('/addbook', (req, res) => {
     seedBook();
-    res.status(200).json({ 'message': 'Create Book SUCCESS 💚!!' })
-})
-//❤️Welcome Message❤️
-app.get('/', (req, res) => {
-    res.status(200).json({ "❤️": "Hello from The Back-End !" })
+    res.status(200).json({ 'message': 'Create Book SUCCESS ✔️!!' })
 })
 
-//❤️❤️❤️❤️❤️
+//💚 Welcome Message💚
+app.get('/', (req, res) => {
+    res.status(200).json({ "❤️": "Hello from The Back-End !✔️" })
+})
+
+//💙 PORT💙
 app.listen(PORT, () => {
-    console.log(`You In Port : ${PORT} 💚!`);
-});
+    console.log(`✔️ You In Port : ${PORT}✔️!`);
+})
