@@ -24,3 +24,5 @@ module.exports = {
     seedBook,
     bookModel
 }
+//mongoose.connect(`${MONGO_SERVER}/Book`, { useNewUrlParser: true, useUnifiedTopology: true });
+//MONGO_SERVER=mongodb://localhost:27017

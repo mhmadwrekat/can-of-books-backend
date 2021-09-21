@@ -1,6 +1,5 @@
 'use strict';
 const { bookModel } = require('../models/Book.models');
-
 // Retern All Data From DB
 let bookController = (req, res) => {
     bookModel.find().then(data => {
@@ -14,6 +13,19 @@ const createBookController = async (req, res) => {
     newBook.save();
     let data = await bookModel.find({});
     res.status(201).json(data);
+}
+// UPDATE BOOK 
+const updateBookController = async (req, res) => {
+    let bookId = req.params.id;
+    let update = req.body;
+    bookModel.findOne({ _id: bookId }).then(book => {
+        book.title = update.title,
+            book.description = update.description,
+            book.email = update.email
+        book.save();
+    });
+    let up = await bookModel.find({});
+    res.status(200).send(up);
 }
 // DELETE BOOK
 const deleteBookController = (req, res) => {
@@ -31,5 +43,6 @@ const deleteBookController = (req, res) => {
 module.exports = {
     bookController,
     createBookController,
-    deleteBookController
+    deleteBookController,
+    updateBookController
 }
